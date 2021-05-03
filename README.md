@@ -43,4 +43,4 @@
 * 각 Round 결과마다 주행 거리를 업데이트 한다. (UPDATE DISTANCE / ADD DISTANCE )
 * 각 ROund 결과를 Print Out 한다.
 
-4. 최종적으로 누가 이겼는지 확인한다.
+4. 최종적으로 누가 이겼는지 확인한다. (whoIsWin)
