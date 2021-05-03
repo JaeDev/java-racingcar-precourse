@@ -24,6 +24,8 @@ public class GamePlay {
         }
 
         numberOfGamePlay = inputNumberOfGamePlay();
+
+
         System.out.println("끝");
     }
 
