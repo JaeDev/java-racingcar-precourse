@@ -2,11 +2,8 @@ package racingcar;
 
 public class ValidateUtils {
     public static boolean validateCarNames(String input) {
-        if(input.equals(",")){
-            return false;
-        }
         String[] inputArr = input.split(",");
-        if(inputArr.length==1){
+        if(inputArr.length<=1){
             return false;
         }
 
