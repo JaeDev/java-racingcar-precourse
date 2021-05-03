@@ -42,3 +42,5 @@
    4이상일 경우 전진, 3이하의 값이면 멈춤
 * 각 Round 결과마다 주행 거리를 업데이트 한다. (UPDATE DISTANCE / ADD DISTANCE )
 * 각 ROund 결과를 Print Out 한다.
+
+4. 최종적으로 누가 이겼는지 확인한다.
