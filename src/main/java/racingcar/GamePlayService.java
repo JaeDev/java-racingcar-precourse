@@ -12,6 +12,7 @@ public class GamePlayService {
 
     private static String SPLITTER = ",";
     private static String BASIC_DISTANCE = "";
+    private static String ONE_DISTANCE = "-";
 
     Scanner scanner;
     public GamePlayService() {
@@ -21,8 +22,8 @@ public class GamePlayService {
     public GameCarGroups registerCars(String inputCarNames){
         String[] inputArr = inputCarNames.split(SPLITTER);
         Map<String, String> inputMap = new HashMap<>();
-        for (int i = 0; i < inputArr.length; i++){
-            String str = inputArr[i].trim();
+        for(String input: inputArr){
+            String str = input.trim();
             inputMap.put(str, BASIC_DISTANCE);
         }
         return new GameCarGroups(inputMap);
@@ -51,7 +52,7 @@ public class GamePlayService {
 
     public String getDistance(String distance){
         if(RandomUtils.getRandomValue()>=4){
-            distance += "-";
+            distance += ONE_DISTANCE;
         }
         return distance;
     }

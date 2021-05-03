@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class GameCarGroups {
+    private final String RESULT_SUFFIX = "가 최종 우승했습니다.";
     private Map<String, String> cars;
 
     public GameCarGroups(Map<String, String> cars) {
@@ -23,14 +24,13 @@ public class GameCarGroups {
     public void whoIsWin(){
         int max = maxDistance();
 
-        String msg = "";
+        StringBuilder msg = new StringBuilder();
         Iterator<String> it = keys();
         while(it.hasNext()){
             String carName = it.next();
-            msg += printResult(carName, max);
+            msg.append(printResult(carName, max));
         }
-
-        System.out.println(msg.substring(0, msg.lastIndexOf(","))+"가 최종 우승했습니다.");
+        System.out.println(msg.substring(0, msg.lastIndexOf(","))+RESULT_SUFFIX);
     }
     private String printResult(String carName, int max){
         String distance = cars.get(carName);
@@ -53,13 +53,13 @@ public class GameCarGroups {
 
     @Override
     public String toString() {
-        String msg = "";
+        StringBuilder msg = new StringBuilder();
         Iterator<String> it = keys();
         while(it.hasNext()){
             String carName = it.next();
             String distance = get(carName);
-            msg += (carName + " : " + distance+"\n");
+            msg.append(carName).append(" : ").append(distance).append("\n");
         }
-        return msg;
+        return msg.toString();
     }
 }
