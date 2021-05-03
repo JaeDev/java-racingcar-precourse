@@ -24,6 +24,9 @@
     * "qwerty" 재입력
     * "qwert, asdfgh" 재입력
     * "qwert, asdf" 성공
+* 차량 이름이 같은 경우 재입력(TDD)
+    * "qwert, qwert" 재입력
+    * "qwert, qwer" 성공
 * 기타(TDD)
     * "qwert, asdf,  " 재입력
     * "  ,  " 재입력
